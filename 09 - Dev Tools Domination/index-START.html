@@ -18,28 +18,60 @@
     }
 
     // Regular
+    console.log("Hello world!");
 
     // Interpolated
+    console.log('Hello world! %s', '😂');
 
     // Styled
+    console.log('%c Hello big world!', 'font-size: 44px');
+    console.log('Hello %c big %c red %c world', 'font-size: 44px', 'background:red', 'background: none');
 
     // warning!
+    console.warn('CAUTION!');
 
     // Error :|
+    console.error('ERROR!');
 
     // Info
+    console.info('I am at the airport.');
 
     // Testing
+    console.assert(1 == 2, 'Wrong!');
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    //console.log(p); // actual element
+    //console.dir(p); // what lives in element
 
     // Grouping together
-
+    dogs.forEach(dog => { 
+      console.group(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.groupEnd(`${dog.name}`);
+    });
+    dogs.forEach(dog => { 
+      console.groupCollapsed(`${dog.name}`);
+      
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.groupEnd(`${dog.name}`);
+    });
     // counting
+    console.count('Sara');
+    console.count('Sara');
+    console.count('Mikaella');
+    console.count('Adam');
+    console.count('Sara');
+    console.count('Adam');
 
     // timing
+    
+
+    console.table(dogs);
 
   </script>
 </body>
