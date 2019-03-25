@@ -46,6 +46,10 @@ function scrub(e) {
 
 function changeScreen() {
     // not sure how I would do this but essentially need to use the .player:fullscreen from style.css
+    player.classList.add('fullscreen');
+    video.clientWidth = window.outerWidth;
+    console.log(video.clientWidth);
+    console.log(window.outerWidth);
 }
 
 // Event Listeners
