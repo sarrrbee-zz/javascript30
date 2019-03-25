@@ -7,6 +7,19 @@
 </head>
 <body>
 <script>
+  const pressed = [];
+  const secretcode = 'alex';
+
+window.addEventListener('keyup', (e) => {
+  pressed.push(e.key);
+  pressed.splice(-secretcode.length-1, pressed.length-secretcode.length);
+  if (pressed.join('').includes(secretcode))
+  {
+    console.log("YOU UNLOCKED THE CODE!");
+    cornify_add();
+  }
+});
+
 </script>
 </body>
 </html>
